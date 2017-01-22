@@ -7,6 +7,7 @@ import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
  */
 public class Test {
     public static void main(String[] args) {
+
         JTestCheckBlacklistFcade jTestCheckBlacklistFcade = new JTestCheckBlacklistFcade();
         JavaSamplerContext arg = new JavaSamplerContext(jTestCheckBlacklistFcade.getDefaultParameters());
         jTestCheckBlacklistFcade.runTest(arg);

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--<dubbo:registry protocol="zookeeper" address="192.178.106.224:2181"/>-->
+    <!--<dubbo:registry protocol="zookeeper" address="10.0.20.175:2181"/>-->
+
+    <dubbo:application name="baofoo-rm-front"/>
+
+    <dubbo:reference id="iRmRequestService"
+                     interface="com.baofoo.rm.ws.dubbo.core.IRmRequestService" version="1.0.0" url="10.0.20.111:20811"/>
+</beans>
